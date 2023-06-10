@@ -12,7 +12,7 @@ type Props = {
 const Header: React.FC<Props> = () => {
   const [authInfo, setAuthInfo] = useContext(AuthInfoContext);
   console.log("rendered")
-  const loginUrl = `https://accounts.spotify.com/authorize?client_id=${process.env.REACT_APP_SPOTIFY_CLIENT_ID}&response_type=code&scope=user-read-private+user-top-read&redirect_uri=${process.env.REACT_APP_HOST}/callback`
+  const loginUrl = `https://accounts.spotify.com/authorize?client_id=${process.env.REACT_APP_SPOTIFY_CLIENT_ID}&response_type=code&scope=streaming+user-read-private+user-top-read+user-read-email&redirect_uri=${process.env.REACT_APP_HOST}/callback`
   function logout() {
     localStorage.clear();
     setAuthInfo({} as AuthContext);

@@ -6,7 +6,6 @@ import ArtistsListView from './Artistslist';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import { LoginFlagProvider } from '../providers/loginProvider';
-
 export default function Contents() {
     const [playlistID, setPlaylistID] = useState<string>("37i9dQZF1DXaJxsaI3czLL");
     const [artistID, setArtistID] = useState<string>("1snhtMLeb2DYoMOcVbb8iB")

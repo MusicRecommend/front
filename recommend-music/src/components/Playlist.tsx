@@ -8,6 +8,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import Stack from '@mui/material/Stack';
 import { useContext } from 'react';
 import { AuthInfoContext } from '../providers/loginProvider';
+import WebPlayback from "./WebPlayback";
 
 type Props = {
     setPlaylistID: React.Dispatch<React.SetStateAction<string>>
@@ -45,6 +46,7 @@ const PlaylistView: React.FC<Props> = ({ setPlaylistID }: Props) => {
     }, [])
     return (
         <Stack spacing={1}>
+            <WebPlayback token={AccessToken}></WebPlayback>
             <Autocomplete
                 onChange={(event, item) => {
                     if (item !== null) {
