@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import { Grid, Stack } from '@mui/material';
+import React from "react";
+import { Stack } from '@mui/material';
 
 export default function Help() {
     return (
         <Stack spacing={1}>
-            <img src="/images/help.png" />
-
-
+            <img src="/images/help.png" alt="使用方法" />
         </Stack >
-
     );
 }
 
