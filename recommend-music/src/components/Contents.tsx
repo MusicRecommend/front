@@ -13,7 +13,7 @@ export default function Contents() {
                 <Grid item xs={6} md={3}>
                     <SearchPlaylistView setPlaylistID={setPlaylistID}></SearchPlaylistView>
                 </Grid>
-                <Grid item xs={6} md={3}>
+                <Grid item xs={3}>
                     <ArtistsListView setArtistID={setArtistID}></ArtistsListView>
                 </Grid>
                 <Grid item xs={6}>

@@ -10,6 +10,7 @@ import { LoginFlagProvider } from './providers/loginProvider';
 import Footer from './components/Footer';
 import { createTheme } from '@mui/material/styles';
 import { PlayerProvider } from './providers/playerProvider';
+import Help from './components/Help';
 
 function App() {
   // const [playlist, setPlaylist] = useState<Playlist>();
@@ -26,8 +27,9 @@ function App() {
             <Grid item xs={10}>
               <BrowserRouter>
                 <Routes>
-                  <Route path="/" element={<Top></Top>} />
-                  <Route path="/recommend" element={<Contents></Contents>}></Route>
+                  <Route path="/" element={<Contents></Contents>} />
+                  <Route path="/recommend" element={<Contents></Contents>} />
+                  <Route path="/help" element={<Help></Help>} />
                   <Route path="/callback" element={<LoginFlagProvider><Callback></Callback></LoginFlagProvider>} />
                 </Routes>
               </BrowserRouter>

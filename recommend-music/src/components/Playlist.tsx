@@ -23,13 +23,6 @@ const PlaylistView: React.FC<Props> = ({ setPlaylistID }: Props) => {
     const AccessToken = authInfo.token;
     const handleClick = (track: Track) => {
     }
-    const fetchPlaylists = async () => {
-        const response = await fetch(`https://api.spotify.com/v1/me/playlists`, {
-            headers: { 'Authorization': `Bearer ${AccessToken}` }
-        });
-        const data: Playlists = await response.json();
-        setPlaylists(data.items);
-    }
     const fetchPlaylist = async (id: string) => {
         const response = await fetch(`https://api.spotify.com/v1/playlists/${id}`, {
             headers: { 'Authorization': `Bearer ${AccessToken}` }
@@ -38,9 +31,6 @@ const PlaylistView: React.FC<Props> = ({ setPlaylistID }: Props) => {
         setTracks(data.tracks)
     }
     useEffect(() => {
-        if (AccessToken !== "") {
-            fetchPlaylists();
-        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (
@@ -57,7 +47,7 @@ const PlaylistView: React.FC<Props> = ({ setPlaylistID }: Props) => {
                 onInputChange={(event, newInputValue) => {
                     setInputValue(newInputValue);
                 }}
-                id="controllable-states-demo"
+                id="controllable-states"
                 options={playlists}
                 sx={{ width: 200 }}
                 getOptionLabel={(option) => option.name}

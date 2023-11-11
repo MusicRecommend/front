@@ -18,7 +18,6 @@ const PlaylistView: React.FC<Props> = ({ }) => {
     const [value, setValue] = React.useState<string | null>(options[0]);
     const [inputValue, setInputValue] = React.useState('');
     const handleClick = (track: Track) => {
-        console.log("----");
     }
     useEffect(() => {
         const fetchPlaylist = async () => {

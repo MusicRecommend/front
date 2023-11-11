@@ -30,7 +30,7 @@ const SearchPlaylistView: React.FC<Props> = ({ setPlaylistID }: Props) => {
     }, [searchPlaylistName])
     return (
         <Stack spacing={1}>
-            <TextField id="outlined-basic" label="検索欄" variant="outlined"
+            <TextField id="outlined-basic" label="プレイリスト検索欄" variant="outlined"
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                     setSearchPlaylistName(event.target.value);
                 }}
